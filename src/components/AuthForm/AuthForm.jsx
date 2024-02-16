@@ -36,13 +36,23 @@ export const AuthForm = () => {
             <Text mx={1} color={"white"}>OR</Text>
             <Box flex={2} h={"1px"} bg={"gray.400"} />
          </Flex>
-
          {/* Google Login */}
          <Flex alignItems={"center"} justifyContent={"center"} cursor={"pointer"}>
             <Image src='/google.png' w={5} alt='Google Logo'/>
             <Text mx={2} color={"blue.500"}>Log in with Google</Text>
          </Flex>
-    </VStack>
+        </VStack>
+    </Box>
+    <Box border={"1px solid gray"} borderRadius={4} padding={5}>
+        <Flex alignItems={"center"} justifyContent={"center"} gap={1}>
+            <Box mx={2} fontSize={14}>
+                {isLogin ? "Don't have an account?" : "Already have an account?"}
+                {/* negating current login state when text is pressed */}
+            </Box>
+            <Box onClick={() =>setIsLogin(!isLogin)} color={"blue.500"} cursor={"pointer"}>
+                {isLogin ? "Sign Up" : "Log In"}
+            </Box>
+        </Flex>
     </Box>
     </>
   )
