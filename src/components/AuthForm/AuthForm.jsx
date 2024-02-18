@@ -1,8 +1,10 @@
 import { Box, Button, Flex, Image, Input, Text, VStack } from '@chakra-ui/react'
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export const AuthForm = () => {
     const [isLogin, setIsLogin] = useState(true)
+    const navigate = useNavigate()
     const [inputs, setInputs] = useState({
         email: '',
         password: '',
@@ -10,8 +12,14 @@ export const AuthForm = () => {
     })
 
     const handleAuth = () => {
-    
+        // console.log(inputs)
+        if (!inputs.email || !inputs.password) {
+            alert('Please fill all of the fields')
+            return
+        }
+        navigate('/')
     }
+    
   return (
     <>
     <Box border={"1px solid gray"} borderRadius={4} padding={5}>
