@@ -7,7 +7,7 @@ export const FeedPostHeader = () => {
         <Flex alignItems={"center"} gap={2}>
             <Avatar src='/img1.png' alt='user profile pic' size={"sm"}/>
             <Flex fontSize={12} fontWeight={"bold"} gap={2}>
-                asaprogrammer
+                coding_locker
                 <Box color={"gray.500"}>
                     • 1w
                 </Box>

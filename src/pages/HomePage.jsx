@@ -7,7 +7,7 @@ export const HomePage = () => {
    <Container maxW={"container.lg"} >
     <Flex gap={20}>
       {/* left side of home content */}
-      <Box flex={2} py={10}>
+      <Box flex={2} py={10} >
         <FeedPosts />
       </Box>
       {/* Right side of Home content */}
