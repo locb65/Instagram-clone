@@ -3,14 +3,14 @@ import { FeedPostHeader } from './FeedPostHeader'
 import { Box, Image } from '@chakra-ui/react'
 import { FeedPostFooter } from './FeedPostFooter'
 
-export const FeedPost = () => {
+export const FeedPost = ({img, username, avatar}) => {
   return (
     <>
-    <FeedPostHeader />
-    <Box>
-        <Image src='/img1.png'  alt='user profile pic'/>
+    <FeedPostHeader username={username} avatar={avatar}/>
+    <Box my={2} borderRadius={4} overflow={"hidden"}>
+        <Image src={img}  alt={username}/>
     </Box>
-    <FeedPostFooter />
+    <FeedPostFooter username={username}/>
     </>
   )
 }
