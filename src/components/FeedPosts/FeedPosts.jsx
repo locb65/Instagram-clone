@@ -31,8 +31,8 @@ export const FeedPosts = () => {
           <>
           <FeedPost
           username = "coding_locker"
-          img = '/img1.png'
-          avatar = '/img1.png'
+          img = '/headshot.jpg'
+          avatar = '/headshot.jpg'
            />
         <FeedPost
           username = "Bob"
