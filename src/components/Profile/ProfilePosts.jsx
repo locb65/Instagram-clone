@@ -27,10 +27,15 @@ export const ProfilePosts = () => {
           </Skeleton>
         </VStack>
       ))}
-      <ProfilePost />
-      <ProfilePost />
-      <ProfilePost />
-      <ProfilePost />
+
+      {!isLoading && (
+        <>
+      <ProfilePost img="/img1.png"/>
+      <ProfilePost img="/img2.png"/>
+      <ProfilePost img="/img3.png"/>
+      <ProfilePost img="/img4.png"/>
+      </>
+      )}
     </Grid>
   )
 }
